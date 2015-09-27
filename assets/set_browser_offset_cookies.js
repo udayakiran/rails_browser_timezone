@@ -1,1 +1,0 @@
-// This is example code to set browser cookies.
