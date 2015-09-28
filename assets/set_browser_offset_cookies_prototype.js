@@ -8,7 +8,7 @@ function set_cookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
-function set_browser_offsets() {
+var set_browser_offsets = function() {
   var winterOffset = -1 * (new Date(2010, 11, 21)).getTimezoneOffset() * 60;
   var summerOffset = -1 * (new Date(2010, 5, 21)).getTimezoneOffset() * 60;
   set_cookie('utc_offset_summer', summerOffset, 360);
