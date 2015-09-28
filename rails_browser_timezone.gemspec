@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.files         = %w[
     Gemfile
-    README
+    README.md
     lib/rails_browser_timezone/filter.rb
     lib/rails_browser_timezone/version.rb
     rails_browser_timezone.gemspec
