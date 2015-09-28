@@ -8,7 +8,7 @@ detected for each request.
 Instructions to use
 ==================
 
-0. Installation -
+Installation -
 --------------------
 
 ```
@@ -16,10 +16,10 @@ Instructions to use
 
 ```
 
-0. Usage -
+Usage -
 ---------
 
- 0. Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
+ 1. Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
 
 ``` 
  prepend_around_filter BrowserTimeZoneFilter #Rails < 4.2 (inlcuding Rails 2,3 and 4)
@@ -28,13 +28,15 @@ Instructions to use
 
 ```
 
-  0. Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
+  2. Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
 
 
-==== To do -
+To do -
+-------
 
  Add specs and tests.
 
-== Reference -
+Reference -
+----------
 
 To be updated.
