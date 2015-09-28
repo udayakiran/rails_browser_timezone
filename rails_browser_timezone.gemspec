@@ -16,11 +16,11 @@ Gem::Specification.new do |s|
   s.files         = %w[
     Gemfile
     README
-    lib/browser_timezone_filter.rb
+    lib/rails_browser_timezone/browser_timezone_filter.rb
     lib/rails_browser_timezone/version.rb
     rails_browser_timezone.gemspec
   ]
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "activesupport", '~> 2'
+  s.add_runtime_dependency "activesupport", '> 2'
 end
