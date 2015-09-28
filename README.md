@@ -12,7 +12,7 @@ Installation -
 --------------------
 
 ```
-  gem 'rails_browser_timezone', '0.0.6', :git => 'https://github.com/udayakiran/rails_browser_timezone'
+  gem 'rails_browser_timezone', '0.0.7', :git => 'https://github.com/udayakiran/rails_browser_timezone'
 
 ```
 
