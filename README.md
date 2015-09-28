@@ -6,20 +6,18 @@ detected for each request.
 
 == Instructions to use -
 
-1. Install the gem.
-
+=== Install the gem.
   gem 'rails_browser_timezone', '0.0.6', :git => 'https://github.com/udayakiran/rails_browser_timezone'
 
-2. Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
-
+=== Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
   prepend_around_filter BrowserTimeZoneFilter #Rails < 4.2 (inlcuding Rails 2,3 and 4)
 
   prepend_around_action BrowserTimeZoneFilter #Rails 4.2+
 
-3. Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
+=== Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
 
 
-== To do -
+==== To do -
 
  Add specs and tests.
 
