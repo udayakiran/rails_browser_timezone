@@ -1,7 +1,7 @@
 // This is example code to set browser cookies. Assuming that your app uses prototypejs
 // These methods need to be there ideally on each page.
 
-function set_cookie(cname, cvalue, exdays) {
+var set_cookie = function(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires=" + d.toUTCString();
