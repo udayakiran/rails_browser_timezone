@@ -22,9 +22,8 @@ module RailsBrowserTimezone
       mid_summer_date_string = '2010-06-21'
       mid_winter_date_string = '2010-12-21'
       [ActiveSupport::TimeZone[last_known_tz], ActiveSupport::TimeZone.all].flatten.compact.detect(ifnone = Time.method(:zone_default)) do |zone|
-        Rails.logger.debug "*"*100
         Time.use_zone(zone.name) do
-          Time.zone.parse(mid_summer_date_string).utc_offset == utc_offset_summer && Time.zone.parse(mid_winter_date_string).utc_offset == utc_offset_winter
+          Time.zone.parse(Setting.mid_summer_date_str).utc_offset == utc_offset_summer && Time.zone.parse(Setting.mid_winter_date_str).utc_offset == utc_offset_winter
         end
       end
     end
