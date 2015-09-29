@@ -11,13 +11,21 @@ Installation -
 --------------------
 
 ```
-  gem 'rails_browser_timezone', '0.0.9', :git => 'https://github.com/udayakiran/rails_browser_timezone'
+  gem 'rails_browser_timezone', '0.2.0', :git => 'https://github.com/udayakiran/rails_browser_timezone'
 ```
 
 Usage -
 ---------
 
- 1) Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
+ 1) Create a file in your initializers and set baseline year. This step is optional. This means we are worried about time zone changes that occurred till this year. My suggesstion is to keep this year same as either the year you are starting this project or the year when your rails version is released.
+Use "current" as the value if you want to stay on the edge. But, note that rails and your browsers need to be supporting this as well.
+
+``` 
+# Say in config/initializers/rails_browser_tz_init.rb
+RailsBrowserTimezone::Setting.baseline_year = 2014 #default value is 2011. Accepted values - any valid year or string - "current"
+```
+
+ 2) Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
 
 ``` 
  prepend_around_filter RailsBrowserTimezone::Filter #Rails 4.1.x or earlier (inlcuding Rails 2,3 and 4)
@@ -25,7 +33,7 @@ Usage -
  prepend_around_action RailsBrowserTimezone::Filter #Rails 4.2.x or later
 ```
 
-  2) Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
+  3) Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
     If you use jquery, copy the js code from 'assets/set_browser_offset_cokies_jquery.js' and paste it in your js file which is inlcuded in every page.
     If you use prototypejs, copy the js code 'from assets/set_browser_offset_cokies_prototype.js' and paste it in your js file which is inlcuded in every page.
 
