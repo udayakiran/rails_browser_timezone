@@ -4,14 +4,14 @@
 var browser_tz_baseline_year = 2011; //change this to 'current' if needed
 
 var tz_baseline_year = function() {
-  (browser_tz_baseline_year.toString() === "current") ? new Date().getFullYear() : browser_tz_baseline_year.toString();
+  return (browser_tz_baseline_year.toString() === "current") ? new Date().getFullYear() : browser_tz_baseline_year.toString();
 }
 
 var set_cookie = function(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + "; " + expires;
+  document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
 }
 
 var set_browser_offsets = function() {
