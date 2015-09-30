@@ -4,6 +4,8 @@ rails_browser_timezone
 The purpose of this gem is to track browser's timezone and run rails controller code in the time zone
 detected for each request.
 
+For background and thoughts, please refer - http://developerstream.blogspot.in/2015/09/handling-requests-in-browser-time-zone.html
+
 Instructions to use
 ==================
 
@@ -55,7 +57,7 @@ To do -
 
  Add specs and tests.
 
-Reference -
+Contributing -
 ----------
 
-To be updated.
+Please help with your contribution by filing any issues if found. Pull requests are welcomed :)
