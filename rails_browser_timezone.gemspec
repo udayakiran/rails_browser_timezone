@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
     README.md
     lib/rails_browser_timezone/filter.rb
     lib/rails_browser_timezone/version.rb
-    lib/rails_browser_timezone/filter.rb
+    lib/rails_browser_timezone/setting.rb
     rails_browser_timezone.gemspec
   ]
   s.require_paths = ["lib"]
