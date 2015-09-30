@@ -19,8 +19,6 @@ module RailsBrowserTimezone
       # ActiveSupport::TimeZone[offset] - will return the first time zone that matches the offset.
       # But, we need to get the exact time zone inorder to reflect the daylight savings.
       # So, we get the user's time zone exactly by matching the summer offset and winter offset both.
-      mid_summer_date_string = '2010-06-21'
-      mid_winter_date_string = '2010-12-21'
       [ActiveSupport::TimeZone[last_known_tz], ActiveSupport::TimeZone.all].flatten.compact.detect(ifnone = Time.method(:zone_default)) do |zone|
         Time.use_zone(zone.name) do
           Time.zone.parse(Setting.mid_summer_date_str).utc_offset == utc_offset_summer && Time.zone.parse(Setting.mid_winter_date_str).utc_offset == utc_offset_winter
