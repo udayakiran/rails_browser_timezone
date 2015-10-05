@@ -29,10 +29,26 @@ RailsBrowserTimezone::Setting.baseline_year = 2014 #default value is 2011. Accep
 
  2) Include the around filter in every controller that needs to run code in user's timezone. If you need it for all controllers obviously add it to the application controller.
 
-``` 
- prepend_around_filter RailsBrowserTimezone::Filter #Rails 4.1.x or earlier (inlcuding Rails 2,3 and 4)
+```
+ #Rails 4.1.x or earlier (inlcuding Rails 2,3 and 4)
 
- prepend_around_action RailsBrowserTimezone::Filter #Rails 4.2.x or later
+ class MyTimeZoneController < ApplicationController  #Or in your application_controller.rb
+ 
+   prepend_around_filter RailsBrowserTimezone::Filter
+   	.......
+   	.......
+
+ end
+
+ #Rails 4.2.x or later
+
+ class MyTimeZoneController < ApplicationController  #Or in your application_controller.rb
+
+   prepend_around_action RailsBrowserTimezone::Filter 
+        .......
+        .......
+
+ end
 ```
 
   3) Add the js code that sets the browser offsets in your js files. Code can be found in assets directory based on the js lib you use.
