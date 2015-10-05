@@ -58,8 +58,8 @@ RailsBrowserTimezone::Setting.baseline_year = 2014 #default value is 2011. Accep
 Saving time zone in the database -
 --------------------------------
 
-If you like to save the last_known_timezone of any user in the database, it can be done by accessing the cookie ":last_known_tz" any where in your controller.
-so, 'controller.cookies[:last_known_tz]' would give you the user's last know timezone name once 'RailsBrowserTimezone::Filter' is done with the determining of the time zone from offsets.
+If you like to save the last_known_timezone of any user in the database, it can be done by using "Time.zone.name" any where in your controller,
+once 'RailsBrowserTimezone::Filter' is done with the determining of the time zone from offsets.
 
 Practices in your code -
 -------------------------
